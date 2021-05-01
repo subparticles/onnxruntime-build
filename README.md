@@ -7,13 +7,13 @@ The build can take several minutes (30-90 minutes) to complete and the size of t
 Example of build command:
 
 ```
-docker build . -t onnxruntime_build:1.7.2-arm64
+docker build . -t onnxruntime_build:1.7.2-android-arm64
 ```
 
 Create a container to extract the aar
 
 ```
-id=$(docker create onnxruntime_build:1.7.2-arm64)
+id=$(docker create onnxruntime_build:1.7.2-android-arm64)
 docker cp $id:/home/user/code/onnxruntime/build/Android/Debug/java/build/android/outputs/aar .
 ```
 
